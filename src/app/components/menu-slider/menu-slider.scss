@@ -1,0 +1,269 @@
+.menu-section-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #ed274b;
+
+  .menu-main {
+    display: grid !important;
+    gap: 30px !important;
+    padding: 45px 0;
+    grid-template-columns: 15% 80%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      right: 214px;
+      width: 307px;
+      height: 292px;
+      background-image: url(/assets/images/our-menu-slider/banner-sec.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 991px) {
+      gap: 0 !important;
+      grid-template-columns: 100%;
+    }
+
+    @media (max-width: 576px) {
+      padding: 25px 0;
+    }
+
+    .left-data {
+      position: relative;
+      text-align: center;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      padding-top: 85px;
+
+      @media (max-width: 991px) {
+        display: block;
+        text-align: center;
+        padding-top: 15px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: -30px;
+        width: 268px;
+        height: 300px;
+        background-image: url(/assets/images/our-menu-slider/banner.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      .today-subtitle {
+        font-family: "Playball", cursive;
+        font-size: 24px;
+        line-height: 1.33em;
+        display: block;
+        color: #ffffff;
+        padding: 0 18px 12px;
+        margin: 0;
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+        }
+      }
+
+      h2 {
+        color: #ffffff;
+        margin: 0;
+        line-height: 1.25em;
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+        }
+      }
+
+      .custom-navigation-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 78px 42px 0 0;
+
+        @media (max-width: 991px) {
+          justify-content: center;
+          z-index: 5;
+          padding: 15px 0;
+        }
+
+        .custom-nav-btn {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: none;
+          background-color: #ffffff;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0px 4px 12px #00000026;
+          transition: all 0.2s ease-in-out;
+
+          @media (max-width: 576px) {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:hover {
+            transform: scale(1.06);
+            background-color: #f8f9fa;
+          }
+
+          &:active {
+            transform: scale(0.96);
+          }
+
+          .arrow-tick {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-top: 2.5px solid #222222;
+            border-left: 2.5px solid #222222;
+
+            @media (max-width: 576px) {
+              width: 8px;
+              height: 8px;
+            }
+          }
+
+          &.prev .arrow-tick {
+            transform: rotate(-45deg);
+            margin-left: 4px;
+          }
+
+          &.next .arrow-tick {
+            transform: rotate(135deg);
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
+    .right-data {
+      overflow: hidden;
+
+      /* Dynamic Responsive Track Logic */
+      .menu-carousel-track {
+        display: flex;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        padding: 15px 0;
+        width: 100%;
+        gap: 25px;
+
+        // Dynamic multi-calculation seamlessly synced with TS
+        transform: translateX(calc(var(--current-index) * (100% / var(--items-per-view)) * -1));
+
+        &.no-transition {
+          transition: none !important;
+        }
+      }
+
+      /* Fixed Structural Fractions according to your requirements */
+      .menu-capsule-card-wrapper {
+        box-sizing: border-box;
+
+        // Default (1200px & Above) -> 7 Cards
+        flex: 0 0 12.7%;
+
+        // Under 1200px (Matches TS 1024px to 1199px) -> 5 Cards
+        @media (max-width: 1440px) {
+          flex: 0 0 calc(100% / 5);
+        }
+
+        // Under 1024px (Matches TS 768px to 1023px) -> 4 Cards
+        @media (max-width: 1023px) {
+          flex: 0 0 calc(100% / 4);
+        }
+
+        // Under 768px (Above 320px Mobile Screen) -> Strict 1 Card View
+        @media (max-width: 576px) {
+          flex: 0 0 calc(100% / 2);
+        }
+      }
+
+      /* Capsule Proportions */
+      .menu-capsule-card {
+        width: 100%;
+        max-width: 188px;
+        background-color: #ffffff;
+        border-radius: 100px;
+        padding: 16px 16px 47px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        box-shadow: 0 10px 25px #0000001f;
+        gap: 20px;
+        height: 100%;
+        max-height: 330px;
+
+        @media (max-width: 576px) {
+          padding: 12px 16px 22px 16px;
+          max-height: 300px;
+        }
+
+        .image-circle-frame {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          max-width: 156px;
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-text-block {
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+          padding: 0 3px;
+
+          h5 {
+            font-size: 16px;
+            line-height: 1.5em;
+            margin: 0;
+            font-weight: bold;
+            color: #222222;
+
+            @media (max-width: 576px) {
+              font-size: 14px;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 1.5em;
+            color: #434343;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

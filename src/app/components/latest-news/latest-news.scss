@@ -1,0 +1,265 @@
+.latest-wrapper {
+  background-color: #F3F3F3;
+
+  .latest-main {
+    padding: 105px 0 81px;
+    background-image: url('/assets/images/latest-news/banner.png');
+    background-size: auto;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    @media (max-width: 991px) {
+      padding: 44px 0;
+
+    }
+
+    @media (max-width: 576px) {
+      padding: 30px 0;
+    }
+
+    .pb-space {
+      position: relative;
+      padding-bottom: 38px;
+      display: flex;
+
+      @media (max-width: 1440px) {
+        padding-bottom: 50px;
+      }
+
+      @media (max-width: 1024px) {
+        padding-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 36px;
+        margin: 0;
+        font-weight: bold;
+        color: #222222;
+        line-height: 1.1em;
+
+        @media (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 22px;
+        }
+      }
+
+      .left-arrow-btn,
+      .right-arrow-btn {
+        border-radius: 51px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        box-shadow: 0px 0px 15px 2px #ECECEC;
+        cursor: pointer;
+      }
+
+      .left-arrow-btn {
+        margin-right: 16px;
+      }
+
+      .btm-dots-latest {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-50%, 0);
+        display: flex;
+        align-items: center;
+
+        .sun-icon-latest {
+          display: inline-block;
+          position: relative;
+          width: 18px;
+          height: 18px;
+          border: 1px solid #007a3d;
+          border-radius: 50%;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            background-color: #007a3d;
+            border-radius: 50%;
+          }
+        }
+
+        .hero-black-dot {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          background-color: #000000;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .slider-main {
+      position: relative;
+      overflow: hidden;
+      max-width: 1635px;
+      margin-right: 0;
+
+      @media (max-width: 576px) {
+        padding: 0 15px 15px;
+      }
+
+      .slider-track {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 30px;
+      }
+
+      .card-child-wrapper {
+        flex: 0 0 25%;
+        box-sizing: border-box;
+
+        @media (max-width: 1200px) {
+          flex: 0 0 33.3333%;
+        }
+
+        @media (max-width: 911px) {
+          flex: 0 0 50%;
+        }
+
+        @media (max-width: 576px) {
+          flex: 0 0 100%;
+          padding-right: 0;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .card-child {
+        background: #ffffff;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        height: 100%;
+        transition: all 0.2s ease-in-out;
+        padding: 0 15px;
+        width: 100%;
+        @media (max-width: 1200px) {
+          padding: 0 8px;
+          max-width: 377px;
+        }
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 30px #0000000f;
+        }
+
+        .card-img-container {
+          width: 100%;
+          overflow: hidden;
+          /* Creates spacing from card outer boundary if preferred */
+
+          .card-img {
+            width: 377px;
+            max-height: 243px;
+            aspect-ratio: 1.4 / 1;
+            /* Standard landscape aspect-ratio matching your image reference */
+            object-fit: cover;
+            border-radius: 16px;
+            /* Smooth inner image tracking curves */
+            display: block;
+
+            @media (max-width: 1200px) {
+              width: 100%;
+              max-width: 377px;
+            }
+
+          }
+        }
+
+        .card-content {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+
+
+          .card-meta {
+            margin-bottom: 16px;
+
+            .meta-item {
+              span {
+                font-size: 10px;
+                font-weight: 500;
+                color: #909090;
+                padding-left: 10px;
+                line-height: 2.4em;
+              }
+
+              img {
+                height: 13px;
+                width: 13px;
+              }
+
+              .meta-icon {
+                font-size: 10px;
+                color: #CECECE;
+              }
+            }
+          }
+
+          .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.7em;
+            color: #222222;
+            margin-bottom: 18px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 52px;
+
+            /* Uniform height ensures all buttons align perfectly at the bottom */
+            @media (max-width: 576px) {
+              height: 50px;
+              margin-bottom: 0px;
+              font-size: 14px;
+            }
+
+          }
+
+          .read-more-btn {
+            font-size: 12px;
+            font-weight: 600;
+            color: #222222;
+            text-decoration: none;
+            padding: 14px 0;
+            line-height: 1.3em;
+
+            @media (max-width: 576px) {
+              padding: 8px 0;
+              font-size: 8px;
+            }
+
+            .arrow-right {
+              transition: all 0.2s ease-in-out;
+              font-size: 15px;
+            }
+
+            &:hover {
+              color: #007A4B;
+
+              .arrow-right {
+                transform: translateX(4px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

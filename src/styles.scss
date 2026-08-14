@@ -1,1 +1,436 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1360px;
+  padding: 0 15px;
+  margin: 0 auto !important;
+}
+
+
+.filet-migon-order-btn {
+  background-color: #007A4B;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px 0 46px;
+  gap: 21px;
+  border-radius: 56px;
+  transition: all ease-in-out 0.2s;
+  font-weight: bolder;
+  font-size: 11px;
+  line-height: 4.91em;
+
+  &:hover {
+    background-color: #ED274B;
+  }
+
+  @media (max-width:1199px) {
+    gap: 12px;
+    padding: 4px 4px 3px 8px;
+    font-size: 12px;
+  }
+
+  @media (max-width:768px) {
+    padding: 4px 4px 3px 8px;
+    gap: 8px;
+    font-size: 8px;
+  }
+
+
+
+  span {
+    color: #007A4B;
+    background-color: white;
+    display: flex;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:1199px) {
+      height: 25px;
+      width: 25px;
+    }
+
+    @media (max-width:768px) {
+      height: 20px;
+      width: 20px;
+    }
+
+  }
+
+
+}
+
+
+.hero-left-btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  @media (max-width:576px) {
+    gap: 50px;
+  }
+
+  .explore-now {
+    background-color: #ED274B;
+    color: white;
+    border-radius: 50px;
+    padding: 8px 8px 8px 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    transition: all ease-in-out 0.2s;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #007a3d;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 5px 5px 4px 30px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 5px 5px 4px 15px;
+      gap: 10px;
+    }
+
+    .explore-text {
+      font-size: 11px;
+      line-height: 1.5em;
+
+      @media (max-width: 576px) {
+        font-size: 8px;
+      }
+
+    }
+
+    .expore-right-angle {
+      font-size: 12px;
+      background-color: white;
+      color: green;
+      display: flex;
+      border-radius: 50px;
+      height: 40px;
+      width: 40px;
+      justify-content: center;
+      align-items: center;
+
+
+      @media (max-width: 576px) {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+
+  .order-btn-parent {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+
+    @media (max-width:768px) {
+      gap: 10px;
+    }
+
+
+    .order {
+      background-color: white;
+      border: 6px solid #FFC222;
+      border-radius: 50px;
+      font-size: 11px;
+      color: black;
+      height: 52px;
+      width: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease-in-out 0.2s;
+
+      @media (max-width:768px) {
+        height: 45px;
+        width: 45px;
+        border: 4px solid #FFC222;
+      }
+
+      @media (max-width:576px) {
+        height: 30px;
+        width: 30px;
+        border: 3px solid #FFC222;
+      }
+
+      &:hover {
+        background-color: #FFC222;
+        border: 6px solid #ffffff;
+
+      }
+
+      i {
+
+        @media (max-width: 576px) {
+          font-size: 8px;
+        }
+      }
+
+
+    }
+
+    .order-text {
+      font-size: 14px !important;
+
+      @media (max-width:768px) {
+        font-size: 10px !important;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 8px !important;
+      }
+    }
+  }
+
+}
+
+
+.guarentee-left-btns {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+
+  @media (max-width:576px) {
+    gap: 50px;
+  }
+
+  .learn-now {
+    background-color: #ED274B;
+    color: white;
+    border-radius: 50px;
+    padding: 8px 6px 8px 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    transition: all ease-in-out 0.2s;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #007a3d;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 5px 5px 4px 30px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 5px 5px 4px 15px;
+      gap: 10px;
+    }
+
+    .learn-text {
+      font-size: 14px;
+      line-height: 1.5em;
+
+      @media (max-width: 576px) {
+        font-size: 8px;
+      }
+
+    }
+
+    .guarentee-icon-parent {
+      font-size: 12px;
+      background-color: white;
+      color: #ED274B;
+      display: flex;
+      border-radius: 50px;
+      height: 40px;
+      width: 40px;
+      justify-content: center;
+      align-items: center;
+
+
+      @media (max-width: 576px) {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+
+  .order-btn-parent {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+
+    @media (max-width:768px) {
+      gap: 10px;
+    }
+
+
+    .order {
+      background-color: white;
+      border: 6px solid #FFC222;
+      border-radius: 50px;
+      font-size: 11px;
+      color: black;
+      height: 52px;
+      width: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width:768px) {
+        height: 45px;
+        width: 45px;
+        border: 4px solid #FFC222;
+      }
+
+      @media (max-width:576px) {
+        height: 30px;
+        width: 30px;
+        border: 3px solid #FFC222;
+      }
+
+      i {
+
+        @media (max-width: 576px) {
+          font-size: 8px;
+        }
+      }
+
+
+    }
+
+    .order-text {
+      font-size: 14px !important;
+
+      @media (max-width:768px) {
+        font-size: 10px !important;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 8px !important;
+      }
+    }
+  }
+
+  .expore-right-angle {
+    font-size: 12px;
+    background-color: white;
+    color: green;
+    display: flex;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+
+
+    @media (max-width: 576px) {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
+
+.expore-right-angle-big {
+  font-size: 12px;
+  background-color: white;
+  color: green;
+  display: flex;
+  border-radius: 50px;
+  height: 42px;
+  width: 42px;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+// Bottom Dots 
+.btm-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  @media (max-width: 576px) {
+    bottom: -15px;
+  }
+
+  .sun-icon {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #007a3d;
+    border-radius: 50%; // Makes it a perfect circle
+
+    // Inner center dot
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 5px; // Inner dot diameter
+      height: 5px; // Inner dot diameter
+      background-color: #007a3d; // Matching green color
+      border-radius: 50%; // Makes it a perfect dot
+    }
+
+  }
+
+  .hero-black-dot {
+    display: inline-block;
+    width: 6px; // Adjust size here
+    height: 6px; // Adjust size here
+    background-color: #000000; // Pure black color
+    border-radius: 50%; // Makes the square a perfect circle
+  }
+
+  .hero-long-dot {
+    display: inline-block;
+    width: 12px; // Adjust width here
+    height: 6px; // Adjust height here
+    background-color: #000000; // Pure black color
+    border-radius: 3px; // Rounded edges for a pill shape
+  }
+
+}

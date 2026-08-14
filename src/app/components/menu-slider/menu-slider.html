@@ -1,0 +1,46 @@
+<div class="menu-section-wrapper">
+  <div class="container-fluid">
+    <div class="menu-main">
+      
+      <div class="left-data">
+        <h4 class="today-subtitle">Today Menu</h4>
+        <h2 class="our-menu">Our Menu</h2>
+        
+        <div class="custom-navigation-container">
+          <button type="button" class="custom-nav-btn prev" (click)="prevSlide()" aria-label="Previous Slide">
+            <span class="arrow-tick"></span>
+          </button>
+
+          <button type="button" class="custom-nav-btn next" (click)="nextSlide()" aria-label="Next Slide">
+            <span class="arrow-tick"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="right-data">
+        <div class="menu-carousel-track" 
+             [class.no-transition]="disableAnimation"
+             (transitionend)="onTransitionEnd()"
+             [style.--current-index]="currentIndex"
+             [style.--items-per-view]="itemsPerView">
+          
+          @for (item of displayItems; track $index) {
+            <div class="menu-capsule-card-wrapper">
+              <div class="menu-capsule-card">
+                <div class="image-circle-frame">
+                  <img [src]="item.image" [alt]="item.title" loading="lazy" />
+                </div>
+                <div class="card-text-block text-center">
+                  <h5 class="">{{ item.title }}</h5>
+                  <p class="capsule-description">{{ item.description }}</p>
+                </div>
+              </div>
+            </div>
+          }
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

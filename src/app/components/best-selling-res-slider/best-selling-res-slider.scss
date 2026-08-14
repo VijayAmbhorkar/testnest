@@ -1,0 +1,302 @@
+.best-seller-wrapper {
+  display: none;
+
+  @media (max-width: 991px) {
+    display: block;
+  }
+
+  .best-seller-main {
+    .relative {
+      position: relative;
+      padding-top: 60px; // Gives breathing room for absolute navigation buttons
+
+      @media (max-width: 576px) {
+        padding-top: 0px;
+      }
+
+
+      h2 {
+        font-size: 36px;
+        line-height: 1.7em;
+        font-weight: bold;
+        margin: 0;
+        color: #222222;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 10px;
+        }
+      }
+
+      .best-of {
+        font-size: 14px;
+        font-weight: bold;
+        color: #222222;
+        line-height: 2.8em;
+
+        @media (max-width: 576px) {
+          font-size: 10px;
+        }
+
+      }
+
+      .selector-main {
+        border-radius: 15px;
+        color: #007A4B;
+        gap: 29px;
+        box-shadow: 0px 0px 3px #D6D6D6;
+        border-radius: 53px;
+        padding: 4px 4px 4px 32px;
+
+        @media (max-width: 768px) {
+          padding: 4px 4px 4px 4px;
+        }
+
+        @media (max-width:576px) {
+          gap: 4px;
+        }
+
+        h5 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 3.15em;
+
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+
+        .down-angle {
+          background-color: #ECECEC;
+          height: 45px;
+          width: 45px;
+          border-radius: 45px;
+          line-height: 1.2em;
+
+          @media (max-width: 768px) {
+            height: 20px;
+            width: 20px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .left-arrow-btn,
+      .right-arrow-btn {
+        border-radius: 51px;
+        height: 53px;
+        width: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        box-shadow: -1px -1px 7px #ECECEC;
+        background-color: #FFFFFF;
+        line-height: 1em;
+
+        @media (max-width: 768px) {
+          height: 20px;
+          width: 20px;
+          font-size: 12px;
+        }
+      }
+
+      .left-arrow-btn {
+        margin-right: 16px;
+      }
+
+      .slider-container {
+        overflow: hidden; // Hides non-visible cards offscreen
+        width: 100%;
+        padding: 45px 15px 70px;
+
+        @media (max-width:576px) {
+          padding: 15px 0; // Fixes the issue where cards' box-shadow gets cut off
+        }
+      }
+
+      .slider-track {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+        width: 100%;
+      }
+
+      // Base Config: Desktop (> 1024px) displays 4 cards
+      .card-child-wrapper {
+        flex: 0 0 25%;
+        padding-right: 10px;
+        box-sizing: border-box;
+        min-height: 100%;
+
+        // FIXED: Media queries now correctly target the parent breakpoint 
+        // and adjust the flex-basis properties inline.
+        @media (max-width: 1024px) {
+          flex: 0 0 35.3333%; // Exactly 3 slides visible
+        }
+
+        // @media (max-width: 911px) {
+        //   flex: 0 0 30%; // Exactly 2 slides visible
+        // }
+
+        @media (max-width: 576px) {
+          flex: 0 0 70%; // Exactly 1 slide visible
+          padding-right: 10px;
+        }
+
+        @media (max-width: 320px) {
+          flex: 0 0 100%; // Exactly 1 slide visible
+        }
+      }
+
+      // Deep Item Card Styling
+      .card-child {
+        background: #ffffff;
+        box-shadow: 1px 2px 5px #E5E7EB;
+        position: relative;
+        border-radius: 18px !important;
+        overflow: hidden;
+        max-width: 259px;
+        max-height: 100%;
+
+        .heart-img {
+          position: absolute;
+          right: 20px;
+          top: 23px;
+        }
+
+        .over-data-card-main {
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          top: 20px;
+          left: 0;
+          padding: 0 20px;
+          z-index: 2;
+
+          .over-price {
+            background-color: #D4FF6E;
+            height: 26px;
+            width: 67px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            line-height: 1.64em;
+          }
+
+          .over-text {
+            background-color: #66AD53;
+            color: #FFFFFF;
+            height: 26px;
+            width: 78px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.7em;
+          }
+
+          img {
+            height: 15px;
+            width: 15px;
+          }
+        }
+
+        .card-img {
+          max-height: 400px;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+
+          @media (max-width: 576px) {
+            max-height: 200px;
+          }
+        }
+
+        .card-content {
+          padding: 12px 21px 29px 29px;
+
+          @media (max-width: 768px) {
+            padding: 0px 8px 8px 8px;
+          }
+
+          @media (max-width: 576px) {
+            padding: 8px 6px 10px 8px;
+          }
+
+          .zero-num {
+            font-size: 10px;
+            color: #5E5E5E;
+            line-height: 2.4em;
+          }
+
+          h6 {
+            padding: 19px 0 24px;
+            margin: 0;
+
+            @media (max-width: 576px) {
+              padding: 6px 0 0px;
+            }
+          }
+
+          .card-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+              color: #007A4B;
+              font-weight: 700;
+              margin: 0;
+
+              span {
+                color: #D6D6D6;
+                text-decoration: line-through;
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 1.45em;
+              }
+            }
+
+            .card-cart {
+              background-color: #ECECEC;
+              height: 45px;
+              width: 45px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 51px;
+              cursor: pointer;
+
+              @media (max-width: 768px) {
+                height: 33px;
+                width: 33px;
+
+                img {
+                  height: 12px;
+                }
+              }
+
+              @media (max-width: 576px) {
+                height: 22px;
+                width: 22px;
+
+                img {
+                  height: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

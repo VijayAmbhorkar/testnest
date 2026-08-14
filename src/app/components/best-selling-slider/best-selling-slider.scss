@@ -1,0 +1,248 @@
+.best-seller-wrapper {
+    display: block;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+
+    .best-seller-main {
+        .relative {
+            h2 {
+                font-size: 36px;
+                line-height: 1.11em;
+                margin: 0;
+                color: #222222;
+                font-weight: bold;
+            }
+
+            .best-of {
+                color: #222222;
+                font-size: 14px;
+                line-height: 2.9em;
+                font-weight: bold;
+            }
+
+            .selector-main {
+                border-radius: 15px;
+                color: #007A4B;
+                gap: 29px;
+                box-shadow: 2px 1px 4px 2px #ECECEC;
+                border-radius: 53px;
+                padding: 4px 4px 4px 32px;
+
+                h5 {
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 3.15em;
+                    font-weight: bolder;
+                }
+
+                .down-angle {
+                    background-color: #ECECEC;
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 45px;
+                    font-size: 30px;
+                    line-height: 1.5em;
+                }
+            }
+
+            .left-arrow-btn,
+            .right-arrow-btn {
+                border-radius: 51px;
+                height: 53px;
+                width: 53px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background-color: #FFFFFF;
+                box-shadow: 0px 0px 15px 2px #ECECEC;
+                color: #222222;
+            }
+
+            .left-arrow-btn {
+                margin-right: 16px;
+
+            }
+
+
+            // Use ::ng-deep to allow styles to apply inside ngb-carousel
+            ::ng-deep ngb-carousel {
+                padding: 0;
+                margin: 0;
+
+                .card-parent {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 30px;
+                    margin: 0;
+                    padding: 58px 15px 118px; //If i remove padding so card overflow  hidden 
+
+                    @media (max-width:1200px) {
+                        padding: 45px 15px 70px;
+                    }
+
+                    // Target the unique child class you added directly
+                    .card-child {
+                        padding: 0;
+                        box-shadow: 2px 6px 20px #e6e6e6;
+                        position: relative;
+                        border-radius: 18px !important;
+                        overflow: hidden;
+                        max-width: 297px;
+                        max-height: 463px;
+
+                        .heart-img {
+                            position: absolute;
+                            right: 20px;
+                            top: 23px;
+                        }
+
+                        // 
+                        .over-data-card-main {
+                            position: absolute;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            top: 20px;
+                            left: 0;
+                            padding: 0 20px;
+                            z-index: 1;
+
+                            .over-price {
+                                background-color: #D4FF6E;
+                                height: 26px;
+                                width: 67px;
+                                border-radius: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 11px;
+                                line-height: 1.6em;
+                            }
+
+                            .over-text {
+                                background-color: #66AD53;
+                                color: #FFFFFF;
+                                height: 26px;
+                                width: 78px;
+                                border-radius: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 11px;
+                                line-height: 1.6em;
+                            }
+
+                            img {
+                                height: 15px;
+                                width: 15px;
+                            }
+                        }
+
+                        .card-img-main {
+                            position: relative;
+
+                            // img btm position absolute data
+                            .over-data-card-btm-main {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                display: grid;
+                                grid-template-columns: repeat(4, 1fr);
+                                gap: 10px;
+                                padding: 0 33px 14px;
+
+                                .over-data-card-btm-child {
+                                    background-color: #FFFFFF;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    padding: 10px;
+                                    border-radius: 4px;
+                                    border: 1px solid #DBDBDB;
+
+                                    h6 {
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    span {
+                                        color: #000000;
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        .card-img {
+                            width: 295px;
+                            height: 295px;
+                        }
+
+                        .card-content {
+                            padding: 12px 21px 29px 29px;
+
+                            .star-main {
+                                span {
+                                    font-size: 10px;
+                                    line-height: 2.4em;
+                                }
+                            }
+
+                            h6 {
+                                font-weight: bold;
+                                padding: 19px 0 24px;
+                                margin: 0;
+                                font-size: 16px;
+                                line-height: 1.5em;
+                                color: #222222;
+                            }
+
+                            p {
+                                color: #007A4B;
+                                margin: 0;
+
+                                span {
+                                    color: #D6D6D6;
+                                }
+                            }
+
+                            .card-price {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                p {
+                                    font-weight: 700;
+
+                                    span {
+                                        padding-left: 15px;
+                                        text-decoration: line-through;
+                                    }
+                                }
+
+                                .card-cart {
+                                    background-color: #ECECEC;
+                                    height: 45px;
+                                    width: 45px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 51px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

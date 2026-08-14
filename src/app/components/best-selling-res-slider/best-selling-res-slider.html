@@ -1,0 +1,74 @@
+<div class="best-seller-wrapper">
+  <div class="container">
+    <div class="best-seller-main">
+      <div class="relative">
+        <div class="absolute top-0 right-0 d-flex justify-content-between gap-2 z-10">
+          <div class="d-flex align-items-center gap-2 gap-md-4">
+            <h2>BEST SELLING</h2>
+            <span class="best-of">OF</span>
+            <div class="d-flex align-items-center justify-content-center selector-main">
+              <h5>VEGETABLE</h5>
+              <span class="down-angle d-flex align-items-center justify-content-center"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+            </div>
+          </div>
+          <div class="d-flex">
+            <button type="button" (click)="prevSlide()" class="left-arrow-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button type="button" (click)="nextSlide()" class="right-arrow-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="slider-container">
+          <div class="slider-track" [style.transform]="getTrackTransform()">
+            @for (product of products; track $index) {
+              <div class="card-child-wrapper">
+                <div class="rounded card-child">
+                  <div class="over-data-card-main">
+                    @if (product.discount) {
+                      <span class="over-price">
+                        <img src="../assets/images/best-selling/power.png" alt="" />
+                        {{ product.discount }}
+                      </span>
+                    } @else if (product.soldOut) {
+                      <span class="over-text"> SOLD OUT </span>
+                    }
+                    <img src="../assets/images/best-selling/heart.png" alt="" />
+                  </div>
+
+                  <img class="card-img" [src]="product.image" [alt]="product.name" />
+
+                  <div class="card-content">
+                    <div class="flex items-center gap-0.5">
+                      <img src="../assets/images/best-selling/star.png" alt="" />
+                      <img src="../assets/images/best-selling/star.png" alt="" />
+                      <img src="../assets/images/best-selling/star.png" alt="" />
+                      <img src="../assets/images/best-selling/star.png" alt="" />
+                      <img src="../assets/images/best-selling/star.png" alt="" />
+                      <span class="zero-num"> (0) </span>
+                    </div>
+
+                    <h6>{{ product.name }}</h6>
+
+                    <div class="card-price">
+                      <p>
+                        {{ product.price }} <span>{{ product.oldPrice }}</span>
+                      </p>
+                      <span class="card-cart">
+                        <img src="../assets/images/best-selling/cart.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,665 @@
+<div class="best-seller-wrapper">
+  <div class="container">
+    <div class="best-seller-main">
+      <div class="relative">
+        <div class="absolute top-0 right-0 d-flex justify-content-between gap-2 z-10">
+          <div class="d-flex align-items-center gap-4">
+            <h2>BEST SELLING</h2>
+            <span class="best-of">OF</span>
+            <div class="d-flex align-items-center justify-content-center selector-main">
+              <h5>VEGETABLE</h5>
+              <span class="down-angle d-flex align-items-center justify-content-center"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+            </div>
+          </div>
+          <div class="d-flex">
+            <button type="button" (click)="carousel.prev()" class="left-arrow-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button type="button" (click)="carousel.next()" class="right-arrow-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <ngb-carousel
+          #carousel
+          [interval]="20000000"
+          [wrap]="true"
+          [showNavigationArrows]="false"
+          [pauseOnHover]="pauseOnHover"
+          [pauseOnFocus]="pauseOnFocus"
+          (slide)="onSlide($event)"
+        >
+          <ng-template ngbSlide class="ng-temp">
+            <div class="card-parent">
+              <!-- Card 1 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-price">
+                    <img src="../assets/images/best-selling/power.png" alt="" />
+                    -11%
+                  </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+                <!-- Upper Img -->
+                <img
+                  class="card-img"
+                  src="../assets/images/best-selling/brocolli.png"
+                  alt="Card 4"
+                />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Green Broccoli</h6>
+
+                  <div class="card-price">
+                    <p>$8.00 <span>$9.00</span></p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-price">
+                    <img src="../assets/images/best-selling/power.png" alt="" />
+                    -17%
+                  </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+
+                <!-- Upper Img -->
+                <div class="card-img-main">
+                  <img
+                    class="card-img"
+                    src="../assets/images/best-selling/onion.png"
+                    alt="Card 4"
+                  />
+                  <!-- Img btm sontent position absolute -->
+                  <div class="over-data-card-btm-main">
+                    <div class="over-data-card-btm-child">
+                      <h6>130</h6>
+                      <span>Days</span>
+                    </div>
+
+                    <div class="over-data-card-btm-child">
+                      <h6>05</h6>
+                      <span>Hours</span>
+                    </div>
+
+                    <div class="over-data-card-btm-child">
+                      <h6>03</h6>
+                      <span>Mins</span>
+                    </div>
+
+                    <div class="over-data-card-btm-child">
+                      <h6>08</h6>
+                      <span>Secs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Purple Onion</h6>
+
+                  <div class="card-price">
+                    <p>$10.00 <span>$12.00</span></p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/chile.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Chile Bell Pepper</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+
+                <!-- Upper Img -->
+                <img
+                  class="card-img"
+                  src="../assets/images/best-selling/cabbage.png"
+                  alt="Card 4"
+                />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Green Cabbage</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/corn.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Roasted Corn</h6>
+
+                  <div class="card-price">
+                    <p>$8.00 <span>$9.00</span></p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-price">
+                    <img src="../assets/images/best-selling/power.png" alt="" />
+                    -16%
+                  </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+                <!-- Upper Img -->
+                <img
+                  class="card-img"
+                  src="../assets/images/best-selling/organic.png"
+                  alt="Card 4"
+                />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Cherry Tomato</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-text"> SOLD </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/purple.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Organic Asparagus</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/cherry.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Purple Onion</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template ngbSlide class="ng-temp">
+            <div class="card-parent">
+              <!-- Card 1 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-price">
+                    <img src="../assets/images/best-selling/power.png" alt="" />
+                    -11%
+                  </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+                <!-- Upper Img -->
+                <img
+                  class="card-img"
+                  src="../assets/images/best-selling/brocolli.png"
+                  alt="Card 4"
+                />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Green Broccoli</h6>
+
+                  <div class="card-price">
+                    <p>$8.00 <span>$9.00</span></p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-price">
+                    <img src="../assets/images/best-selling/power.png" alt="" />
+                    -17%
+                  </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+
+                <!-- Upper Img -->
+                <div class="card-img-main">
+                  <img
+                    class="card-img"
+                    src="../assets/images/best-selling/onion.png"
+                    alt="Card 4"
+                  />
+                  <!-- Img btm sontent position absolute -->
+                  <div class="over-data-card-btm-main">
+                    <div class="over-data-card-btm-child">
+                      <h6>130</h6>
+                      <span>Days</span>
+                    </div>
+
+                    <div class="over-data-card-btm-child">
+                      <h6>05</h6>
+                      <span>Hours</span>
+                    </div>
+
+                    <div class="over-data-card-btm-child">
+                      <h6>03</h6>
+                      <span>Mins</span>
+                    </div>
+
+                    <div class="over-data-card-btm-child">
+                      <h6>08</h6>
+                      <span>Secs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Purple Onion</h6>
+
+                  <div class="card-price">
+                    <p>$10.00 <span>$12.00</span></p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/chile.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Chile Bell Pepper</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+
+                <!-- Upper Img -->
+                <img
+                  class="card-img"
+                  src="../assets/images/best-selling/cabbage.png"
+                  alt="Card 4"
+                />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Green Cabbage</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/corn.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Roasted Corn</h6>
+
+                  <div class="card-price">
+                    <p>$8.00 <span>$9.00</span></p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-price">
+                    <img src="../assets/images/best-selling/power.png" alt="" />
+                    -16%
+                  </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+                <!-- Upper Img -->
+                <img
+                  class="card-img"
+                  src="../assets/images/best-selling/organic.png"
+                  alt="Card 4"
+                />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Cherry Tomato</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="rounded card-child">
+                <div class="over-data-card-main">
+                  <span class="over-text"> SOLD </span>
+
+                  <img src="../assets/images/best-selling/heart.png" alt="" />
+                </div>
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/purple.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Organic Asparagus</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="rounded card-child">
+                <img src="../assets/images/best-selling/heart.png" class="heart-img" alt="" />
+
+                <!-- Upper Img -->
+                <img class="card-img" src="../assets/images/best-selling/cherry.png" alt="Card 4" />
+
+                <!-- Content -->
+                <div class="card-content">
+                  <!-- Star div -->
+                  <div class="star-main">
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+                    <img src="../assets/images/best-selling/star.png" alt="" />
+
+                    <span> (0) </span>
+                  </div>
+
+                  <h6>Purple Onion</h6>
+
+                  <div class="card-price">
+                    <p>$8.00</p>
+                    <span class="card-cart">
+                      <img src="../assets/images/best-selling/cart.png" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+</div>

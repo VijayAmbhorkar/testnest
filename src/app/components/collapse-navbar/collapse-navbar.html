@@ -1,0 +1,105 @@
+<div class="navbar-hero-wrapper">
+  <div class="navbar-hero-main">
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar-main">
+          <div class="logo-main">
+            <img src="../assets/images/logo.png" alt="Logo" />
+          </div>
+
+          <ul class="nav-menu-main">
+            <li class="nav-item-main"><a href="#">Home <i class="fa-solid fa-angle-down"></i></a></li>
+            <li class="nav-item-main"><a href="#">About Us <i class="fa-solid fa-angle-down"></i></a></li>
+            <li class="nav-item-main"><a href="#">Shop <i class="fa-solid fa-angle-down"></i></a></li>
+            <li class="nav-item-main"><a href="#">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+            <li class="nav-item-main"><a href="#">Pages <i class="fa-solid fa-angle-down"></i></a></li>
+            <li class="nav-item-main"><a href="#">Contact</a></li>
+          </ul>
+
+          <ul class="nav-last-main">
+            <li class="nav-cart-parent">
+              <span class="nav-cart-number">0</span>
+              <img src="../assets/images/Symbol.png" alt="Cart" />
+            </li>
+
+            <li class="desktop-contact">
+              <a href="#" class="nav-contact-us"> Contact Us </a>
+            </li>
+
+            <li class="mobile-toggle" (click)="toggleNavbar()">
+              <img src="../assets/images/bars.png" class="nav-bars" alt="Toggle Menu">
+            </li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu-wrapper" [class.is-open]="isNavbarOpen">
+          <ul class="mobile-menu-list">
+            
+            <li class="mobile-menu-item">
+              <div class="accordion-header" (click)="toggleAccordion('home')">
+                <a href="javascript:void(0)">Home</a>
+                <i class="fa-solid" [ngClass]="activeAccordion === 'home' ? 'fa-angle-up' : 'fa-angle-down'"></i>
+              </div>
+              <ul class="accordion-content" *ngIf="activeAccordion === 'home'">
+                <li><a href="#">Home Page V1</a></li>
+                <li><a href="#">Home Page V2</a></li>
+              </ul>
+            </li>
+
+            <li class="mobile-menu-item">
+              <div class="accordion-header" (click)="toggleAccordion('about')">
+                <a href="javascript:void(0)">About Us</a>
+                <i class="fa-solid" [ngClass]="activeAccordion === 'about' ? 'fa-angle-up' : 'fa-angle-down'"></i>
+              </div>
+              <ul class="accordion-content" *ngIf="activeAccordion === 'about'">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Our Team</a></li>
+              </ul>
+            </li>
+
+            <li class="mobile-menu-item">
+              <div class="accordion-header" (click)="toggleAccordion('shop')">
+                <a href="javascript:void(0)">Shop</a>
+                <i class="fa-solid" [ngClass]="activeAccordion === 'shop' ? 'fa-angle-up' : 'fa-angle-down'"></i>
+              </div>
+              <ul class="accordion-content" *ngIf="activeAccordion === 'shop'">
+                <li><a href="#">Product Catalog</a></li>
+                <li><a href="#">Cart Detail</a></li>
+              </ul>
+            </li>
+
+            <li class="mobile-menu-item">
+              <div class="accordion-header" (click)="toggleAccordion('blog')">
+                <a href="javascript:void(0)">Blog</a>
+                <i class="fa-solid" [ngClass]="activeAccordion === 'blog' ? 'fa-angle-up' : 'fa-angle-down'"></i>
+              </div>
+              <ul class="accordion-content" *ngIf="activeAccordion === 'blog'">
+                <li><a href="#">Latest News</a></li>
+                <li><a href="#">Blog Standard</a></li>
+              </ul>
+            </li>
+
+            <li class="mobile-menu-item">
+              <div class="accordion-header" (click)="toggleAccordion('pages')">
+                <a href="javascript:void(0)">Pages</a>
+                <i class="fa-solid" [ngClass]="activeAccordion === 'pages' ? 'fa-angle-up' : 'fa-angle-down'"></i>
+              </div>
+              <ul class="accordion-content" *ngIf="activeAccordion === 'pages'">
+                <li><a href="#">FAQ Guide</a></li>
+                <li><a href="#">404 Error Screen</a></li>
+              </ul>
+            </li>
+
+            <li class="mobile-menu-item simple-link">
+              <div class="accordion-header">
+                <a href="#">Contact</a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

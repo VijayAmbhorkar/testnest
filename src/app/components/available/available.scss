@@ -1,0 +1,93 @@
+.available-wrapper {
+    .available-main {
+        // position: relative;
+        // background-image: url('../assets/images/available/items.png');
+
+        // .banner-img {
+        //     position: absolute;
+        //     z-index: -1;
+        // }
+        padding: 53px 0;
+        background-color: #F3F3F3;
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width:576px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            gap: 50px;
+        }
+
+        .food-img {
+            max-width: 760px;
+
+            @media (max-width: 1440px) {
+                max-width: 760px;
+            }
+
+            @media (max-width: 1200px) {
+                max-width: 550px;
+            }
+
+            @media (max-width:991px) {
+                max-width: 350px;
+            }
+
+            @media (max-width:576px) {
+                max-width: 286px;
+            }
+
+        }
+
+        .right-data {
+            gap: 13px;
+
+            h2 {
+                font-family: "Playball", cursive;
+                color: #007A4B;
+                font-size: 48px;
+                margin: 0;
+                position: relative;
+                line-height: 1em;
+
+                @media (max-width:576px) {
+                    font-size: 24px;
+                }
+
+                .now-img {
+                    position: absolute;
+                    top: -84px;
+                    right: -18px;
+
+                    @media (max-width: 991px) {
+                        top: -30px;
+                        right: 25px;
+                        height: 32px;
+                    }
+
+                    @media (max-width: 576px) {
+                        top: -34px;
+                        right: 0px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            p {
+                max-width: 409px;
+                text-align: center;
+                font-size: 14px;
+                margin: 0;
+                color: #434343;
+                line-height: 1.75em;
+
+                @media (max-width:576px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+
+    }
+}

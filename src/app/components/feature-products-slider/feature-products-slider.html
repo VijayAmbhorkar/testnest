@@ -1,0 +1,97 @@
+<div class="feature-wrapper">
+  <div class="container-fluid">
+    <div class="feature-main">
+      <div class="data-content">
+        <div class="d-flex align-items-end justify-content-between gap-2 feature-title">
+          <h2 class="featured-head">Featured Products</h2>
+          <div class="d-flex">
+            <button type="button" (click)="prevSlide()" class="left-arrow-btn">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button type="button" (click)="nextSlide()" class="right-arrow-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="slider-container">
+            <div class="slider-track">
+              @for (product of products; track product.name) {
+                <div class="card-child-wrapper">
+                  <div class="rounded card-child">
+                    <div class="over-data-card-main">
+                      @if (product.discount) {
+                        <span class="over-price">
+                          <img src="../assets/images/best-selling/power.png" alt="" />
+
+                          {{ product.discount }}
+                        </span>
+                      } @else if (product.soldOut) {
+                        <span class="over-text"> SOLD OUT </span>
+                      } @else if (product.empty) {
+                        <span> </span>
+                      }
+                      <img src="../assets/images/best-selling/heart.png" alt="" />
+                    </div>
+
+                    <div class="card-img-container">
+                      <img class="card-img" [src]="product.image" [alt]="product.name" />
+
+                      @if (product.timer) {
+                        <div class="countdown-timer-overlay">
+                          <div class="timer-box">
+                            <span class="time-num">{{ product.timer.days }}</span>
+                            <span class="time-lbl">Days</span>
+                          </div>
+                          <div class="timer-box">
+                            <span class="time-num">{{ product.timer.hours }}</span>
+                            <span class="time-lbl">Hours</span>
+                          </div>
+                          <div class="timer-box">
+                            <span class="time-num">{{ product.timer.minutes }}</span>
+                            <span class="time-lbl">Mins</span>
+                          </div>
+                          <div class="timer-box">
+                            <span class="time-num">{{ product.timer.seconds }}</span>
+                            <span class="time-lbl">Secs</span>
+                          </div>
+                        </div>
+                      }
+                    </div>
+
+                    <div class="card-content">
+                      <div class="flex items-center">
+                        <img src="../assets/images/best-selling/star.png" alt="" />
+                        <img src="../assets/images/best-selling/star.png" alt="" />
+                        <img src="../assets/images/best-selling/star.png" alt="" />
+                        <img src="../assets/images/best-selling/star.png" alt="" />
+                        <img src="../assets/images/best-selling/star.png" alt="" />
+                        <span class="zero-num"> (0) </span>
+                      </div>
+
+                      <h6>{{ product.name }}</h6>
+
+                      <div class="card-price">
+                        <p>
+                          {{ product.price }}
+                          <span *ngIf="product.oldPrice">{{ product.oldPrice }}</span>
+                        </p>
+                        <span class="card-cart">
+                          <img src="../assets/images/best-selling/cart.png" alt="" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+        <div class="slider-progress-bar">
+          <div class="progress-fill" [style.width.%]="progressWidth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

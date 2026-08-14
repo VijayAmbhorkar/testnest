@@ -1,0 +1,218 @@
+.navbar-hero-wrapper {
+  background-color: #fae7e7;
+
+  .navbar-hero-main {
+
+    // Navbar Wrap Configuration Scope
+    .navbar-wrapper {
+      background-color: white;
+      box-shadow: 0px 0px 10px #b8b4b4;
+      padding: 28px 0;
+      position: relative;
+
+      @media (max-width: 991px) {
+        padding: 14px 0;
+      }
+
+      @media (max-width: 576px) {
+        padding: 4px 0;
+      }
+
+      .container {
+        .navbar-main {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .logo-main {
+            @media (max-width: 991px) {
+              img {
+                height: 50px;
+              }
+            }
+          }
+
+          a {
+            font-family: "Oswald", sans-serif !important;
+            text-decoration: none;
+          }
+
+          .nav-menu-main {
+            display: flex;
+            align-items: center !important;
+            gap: 24px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              font-size: 18px;
+              line-height: 1.55em;
+
+              a {
+                font-weight: 500;
+                color: #212121 !important;
+              }
+            }
+
+            // Collapse original standard row link style configuration block on smaller tablet viewport
+            @media (max-width: 1024px) {
+              display: none;
+            }
+          }
+
+          .nav-last-main {
+            display: flex;
+            gap: 44px;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .nav-cart-parent {
+              position: relative;
+
+              span.nav-cart-number {
+                position: absolute;
+                top: -10px;
+                font-size: 12px;
+                right: -7px;
+                background-color: black;
+                height: 16px;
+                width: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                border-radius: 50%;
+                font-family: "Oswald", sans-serif !important;
+              }
+
+              img {
+                height: 17px;
+              }
+            }
+
+            .nav-bars {
+              height: 38px;
+              width: 18px;
+              cursor: pointer;
+
+              @media (max-width: 1024px) {
+                height: 14px !important;
+                width: auto !important;
+              }
+            }
+
+            .desktop-contact {
+              @media (max-width: 1024px) {
+                display: none; // Hides custom yellow layout buttons inside grid on mobile
+              }
+
+              .nav-contact-us {
+                background-color: #FFC222;
+                border-radius: 10px;
+                padding: 20px 50px;
+                font-weight: 500;
+                color: white;
+                font-family: "Oswald", sans-serif !important;
+
+                &:hover {
+                  background-color: #ED274B !important;
+                }
+              }
+            }
+
+
+
+            // Reveal Hamburger Trigger Container on Responsive Dimensions
+            .mobile-toggle {
+              display: none;
+
+              @media (max-width: 1024px) {
+                display: block;
+              }
+            }
+          }
+        }
+
+        // Custom Responsive Accordion Layout Sub-System
+        .mobile-menu-wrapper {
+          display: none;
+          width: 100%;
+          background-color: #ffffff;
+          border-top: 1px solid #eeeeee;
+          margin-top: 20px;
+
+          &.is-open {
+            display: block; // Reveal structural display area upon component dynamic class evaluation
+          }
+
+          @media (min-width: 1025px) {
+            display: none !important; // Safety reset fall-back
+          }
+
+          .mobile-menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .mobile-menu-item {
+              border-bottom: 1px solid #f5f5f5;
+              padding: 12px 10px;
+
+              .accordion-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                a {
+                  font-size: 16px;
+                  color: #000000;
+                  font-weight: 500;
+                  display: block;
+                  width: 100%;
+                }
+
+                i {
+                  font-size: 14px;
+                  color: #555555;
+                }
+              }
+
+              .accordion-content {
+                list-style: none;
+                padding: 10px 0 5px 15px;
+                margin: 0;
+
+                li {
+                  padding: 6px 0;
+
+                  a {
+                    font-size: 14px;
+                    color: #666666 !important;
+                    font-weight: 400;
+                    transition: all ease-in-out 0.2s;
+
+                    &:hover {
+                      color: #ED274B !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Closes .container
+    }
+
+    // Closes .navbar-wrapper
+  }
+
+  // Closes .navbar-hero-main
+}
+
+// Closes .navbar-hero-wrapper
